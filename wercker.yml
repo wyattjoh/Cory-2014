@@ -5,5 +5,5 @@ build:
     - npm-test
 deploy:
   steps:
-    - heroku-deploy
-      key-name: "heroku-wercker"
+    - heroku-deploy:
+      key-name: heroku_wercker
