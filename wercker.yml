@@ -5,5 +5,5 @@ build:
     - npm-test
 deploy:
   steps:
-    - heroku-deploy:
+    - vast-tor-5767:
       key-name: HEROKU_SSH_DEPLOY_KEY
