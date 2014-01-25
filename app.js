@@ -30,6 +30,14 @@ if ('development' == app.get('env')) {
   app.locals.pretty = true;
 }
 
+app.all('*', function(req, res, next){
+  fs.readFile('./content.json', function(err, data){
+  	if (err) throw err;
+    res.locals.content = JSON.parse(data);
+    next();
+  });
+});
+
 app.get('/', routes.index);
 app.get('/users', user.list);
 
