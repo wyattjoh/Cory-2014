@@ -6,4 +6,4 @@ build:
 deploy:
   steps:
     - heroku-deploy:
-      key-name: heroku_wercker
+      key-name: "heroku_wercker"
