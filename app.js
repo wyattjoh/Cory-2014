@@ -12,6 +12,9 @@ var fs = require('fs');
 
 var app = express();
 
+// Setup app export
+module.exports = app;
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
