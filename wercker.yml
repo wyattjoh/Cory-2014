@@ -6,4 +6,4 @@ build:
 deploy:
   steps:
     - heroku-deploy:
-      key-name: "heroku_wercker"
+      key-name: HEROKU_SSH_DEPLOY_KEY
