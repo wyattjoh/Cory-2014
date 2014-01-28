@@ -8,5 +8,5 @@ describe('GET /', function(){
     request(app)
       .get('/')
       .expect(200, done);
-  })
-})
+  });
+});

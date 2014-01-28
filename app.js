@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
+app.use(express.compress());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
@@ -35,7 +36,7 @@ if ('development' == app.get('env')) {
 }
 
 app.all('*', function(req, res, next){
-  fs.readFile('./content.json', function(err, data){
+  fs.readFile('./data/content.json', function(err, data){
   	if (err) throw err;
     res.locals.content = JSON.parse(data);
     next();
