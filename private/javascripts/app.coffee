@@ -3,7 +3,7 @@ $(".logo").slideUp(1).delay(300).slideDown('slow', () ->
   $('.ground .text').delay(400).slideDown('slow')
 )
 
-panObject = (selector, introBodyPosition = 0, introBodyPositionMax = 64, introBodyUpdate = 200) ->
+panObject = (selector, introBodyPosition = 0, introBodyPositionMax = 64, introBodyUpdate = 100) ->
   introBody = $(selector)
 
   animateBackground = () ->
@@ -16,5 +16,5 @@ panObject = (selector, introBodyPosition = 0, introBodyPositionMax = 64, introBo
   setInterval animateBackground, introBodyUpdate
   animateBackground()
 
-panObject '.ground .body'
-panObject '.mountains', 0, 1024, 400
+panObject '.backgrounds .ground, .clouds .body'
+panObject '.backgrounds .mountains', 0, 1024, 450

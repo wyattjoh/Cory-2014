@@ -38,7 +38,7 @@ html, body {
     }
 }
 
-.ground {
+.page-box {
     display: table;
     width: 100%;
     height: 100%;
@@ -50,30 +50,35 @@ html, body {
     .body {
         display: table-cell;
         vertical-align: middle;
-
-        background: url('/images/mario-ground.png');
-        background-repeat: repeat-x;
-        background-position-y: bottom !important;
-
         padding-bottom: 128px;
-
-        img {
-
-        }
     }
 }
 
-.mountains {
-            background: url('/images/mario-mountains.png');
-            background-repeat: repeat-x;
-            background-position-y: bottom !important;
-            opacity: 0.5;
-            height: 262px;
-            width: 100%;
-            display: block;
-            position: absolute;
-            bottom: 128px;
+.backgrounds {
+    .mountains {
+        background: url('/images/mario-mountains.png');
+        background-repeat: repeat-x;
+        background-position-y: bottom !important;
+        opacity: 0.5;
+        height: 262px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 128px;
     }
+
+    .ground {
+        background: url('/images/mario-ground.png');
+        background-repeat: repeat-x;
+        background-position-y: bottom !important;
+        z-index: 2;
+        height: 128px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+    }
+}
 
 .clouds {
     display: table;
@@ -116,10 +121,11 @@ p {
 
 .large-image {
     position: absolute;
-    top: 30px;
+    bottom: 128px;
     z-index: 0;
 
     img {
         max-width: 100%;
+        max-height: 700px;
     }
 }
