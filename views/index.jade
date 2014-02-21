@@ -1,10 +1,33 @@
 extends layout
 
 block content
-  .header
-    h1 Super Awesome Express App
-    p Welcome to #{title}
+  //- .header
+  //-   h1 Super Awesome Express App
+  //-   p Welcome to #{title}
 
-  ul
-    for post in content.posts
-      li= post.title
+  //- ul
+  //-   for post in content.posts
+  //-     li= post.title
+
+  section.intro
+    .intro-body
+      .cory-wrap
+          .col-md-4.hidden-sm.hidden-xs.large-image
+            img(src="/images/Cory_Detailed-Large.png")
+          .col-md-8.col-md-offset-4
+            .logo-wrap
+              img(src="/images/Cory_Logo-Small.png", class="logo hidden-md hidden-lg")
+              img(src="/images/Cory_Logo-Large.png", class="logo hidden-xs hidden-sm")
+
+            .intro-text
+              p I decided to run for the Operations and Finance position over a year ago.  Through my two years of experience of Students' Council, sitting on all of the financial committees and chairing the Audit Committee, I learned that financial oversight and budgeting are topics I find very interesting and care deeply about.  Sounds nerdy, but it's true.
+              p Nerdy makes sense: coming from a physics background, I’m well suited to analyzing numerical data and making high-level decisions about the direction and future of our Students’ Union. 
+              p One of the most important - and often under-appreciated - privileges afforded to the SU is the ability to levy fees. In an age of increasing liability and funding cuts, the SU’s privilege to levy a fee on its members is not one to take lightly. The SU oversees over $2.4 million of students’ money. We have to ensure that students are satisfied with the services and benefits they receive and that they have faith in the SU’s ability to act in responsible and transparent manner. As your Vice President Operations and Finance I will strive always to achieve this.
+
+  section.intro
+    .intro-body
+      .cory-wrap
+        .row
+          h1.brand-heading Welcome to #{title}
+          .col-md-8
+          //- img(src="/images/build/Cory_Logo-Small.jpg")

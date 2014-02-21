@@ -1,0 +1,80 @@
+@primary-color-one: rgb(50, 126, 218);
+
+@secondary-color-one: rgb(205, 246, 200);
+
+// @primary-color-one: rgb(2,142,155);
+// @primary-color-two: rgb(30,109,116);
+// @primary-color-three: rgb(1,92,101);
+// @primary-color-four: rgb(53,192,205);
+// @primary-color-five: rgb(94,196,205);
+
+// @secondary-color-one: rgb(255,120,0);
+// @secondary-color-two: rgb(191,115,48);
+// @secondary-color-three: rgb(166,78,0);
+// @secondary-color-four: rgb(255,154,64);
+// @secondary-color-five: rgb(255,181,115);
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.intro {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+
+    &:nth-child(n) {
+        background-color: @secondary-color-one;
+        color: black;
+    }
+
+    &:nth-child(2n) {
+        background-color: @primary-color-one;
+        color: white;
+        z-index: 1;
+    }
+
+    .intro-body {
+        display: table-cell;
+        vertical-align: middle;
+
+        background: url('/images/mario-ground.png');
+        background-repeat: repeat-x;
+        background-position: bottom;
+
+        padding-bottom: 128px;
+
+        img {
+
+        }
+    }
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    // font-family: 'VT323', cursive;
+    // font-size: 22px;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.logo {
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+
+.large-image {
+    position: absolute;
+    top: 30px;
+    z-index: 0;
+
+    img {
+        max-width: 100%;
+    }
+}

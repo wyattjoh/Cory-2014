@@ -1,0 +1,1 @@
+(function(){$(".intro-text").slideUp(1),$(".logo").slideUp(1).delay(300).slideDown("slow",function(){return $(".intro-text").delay(400).slideDown("slow")})}).call(this);

@@ -15,8 +15,12 @@
   "devDependencies": {
     "gulp-less": "~1.1.10",
     "gulp-util": "~2.2.12",
-    "gulp": "~3.4.0",
     "gulp-recess": "~0.2.0",
-    "gulp-minify-css": "~0.2.0"
+    "gulp-minify-css": "~0.2.0",
+    "gulp-imagemin": "~0.1.5",
+    "gulp": "~3.5.1",
+    "gulp-coffee": "~1.4.1",
+    "gulp-coffeelint": "~0.2.2",
+    "gulp-uglify": "~0.2.1"
   }
 }
