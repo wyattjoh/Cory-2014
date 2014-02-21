@@ -1,9 +1,9 @@
-$('.intro-text').slideUp(1)
+$('.ground .text').slideUp(1)
 $(".logo").slideUp(1).delay(300).slideDown('slow', () ->
-  $('.intro-text').delay(400).slideDown('slow')
+  $('.ground .text').delay(400).slideDown('slow')
 )
 
-introBody = $('.intro-body')
+introBody = $('.ground .body')
 introBodyPosition = 0
 introBodyPositionMax = 64
 introBodyUpdate = 200

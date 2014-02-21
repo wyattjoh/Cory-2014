@@ -19,7 +19,7 @@ html, body {
     height: 100%;
 }
 
-.intro {
+.page-box {
     display: table;
     width: 100%;
     height: 100%;
@@ -36,8 +36,52 @@ html, body {
         color: white;
         z-index: 1;
     }
+}
 
-    .intro-body {
+.ground {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    .text {
+        text-align: left;
+    }
+
+    .body {
+        display: table-cell;
+        vertical-align: middle;
+
+        background: url('/images/mario-ground.png');
+        background-repeat: repeat-x;
+        background-position: bottom;
+
+        padding-bottom: 128px;
+
+        img {
+
+        }
+
+        &:before {
+            content: '';
+            background: url('/images/mario-mountains.png');
+            background-repeat: repeat-x;
+            background-position: bottom;
+            opacity: 0.5;
+            height: 262px;
+            width: 100%;
+            display: block;
+            position: absolute;
+            bottom: 128px;
+        }
+    }
+}
+
+.clouds {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    .body {
         display: table-cell;
         vertical-align: middle;
 
@@ -53,16 +97,18 @@ html, body {
     }
 }
 
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
 p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
     // font-family: 'VT323', cursive;
     // font-size: 22px;
 }
 
-.intro-text {
-    text-align: left;
-}
+
 
 .logo {
     margin-bottom: 30px;
