@@ -20,7 +20,7 @@ gulp.task('stylesheets', function () {
   return gulp.src(paths.stylesheets)
   	.pipe(recess())
     .pipe(less())
-    .pipe(minifyCSS())
+    // .pipe(minifyCSS())
     .pipe(gulp.dest('./public/stylesheets'));
 });
 

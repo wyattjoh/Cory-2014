@@ -53,28 +53,27 @@ html, body {
 
         background: url('/images/mario-ground.png');
         background-repeat: repeat-x;
-        background-position: bottom;
+        background-position-y: bottom !important;
 
         padding-bottom: 128px;
 
         img {
 
         }
+    }
+}
 
-        &:before {
-            content: '';
+.mountains {
             background: url('/images/mario-mountains.png');
             background-repeat: repeat-x;
-            background-position: bottom;
+            background-position-y: bottom !important;
             opacity: 0.5;
             height: 262px;
             width: 100%;
             display: block;
             position: absolute;
             bottom: 128px;
-        }
     }
-}
 
 .clouds {
     display: table;

@@ -1,1 +1,79 @@
-html,body{width:100%;height:100%}.page-box{display:table;width:100%;height:100%;text-align:center;position:relative}.page-box:nth-child(n){background-color:#cdf6c8;color:#000}.page-box:nth-child(2n){background-color:#327eda;color:#fff;z-index:1}.ground{display:table;width:100%;height:100%}.ground .text{text-align:left}.ground .body{display:table-cell;vertical-align:middle;background:url(/images/mario-ground.png);background-repeat:repeat-x;background-position:bottom;padding-bottom:128px}.ground .body:before{content:'';background:url(/images/mario-mountains.png);background-repeat:repeat-x;background-position:bottom;opacity:.5;height:262px;width:100%;display:block;position:absolute;bottom:128px}.clouds{display:table;width:100%;height:100%}.clouds .body{display:table-cell;vertical-align:middle;background:url(/images/mario-ground.png);background-repeat:repeat-x;background-position:bottom;padding-bottom:128px}*{font-family:'Press Start 2P',cursive}p{font-size:16px}.logo{margin-bottom:30px;max-width:100%}.large-image{position:absolute;top:30px;z-index:0}.large-image img{max-width:100%}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.page-box {
+  display: table;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+.page-box:nth-child(n) {
+  background-color: #cdf6c8;
+  color: black;
+}
+.page-box:nth-child(2n) {
+  background-color: #327eda;
+  color: white;
+  z-index: 1;
+}
+.ground {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.ground .text {
+  text-align: left;
+}
+.ground .body {
+  display: table-cell;
+  vertical-align: middle;
+  background: url('/images/mario-ground.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  padding-bottom: 128px;
+}
+.mountains {
+  background: url('/images/mario-mountains.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  opacity: 0.5;
+  height: 262px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 128px;
+}
+.clouds {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.clouds .body {
+  display: table-cell;
+  vertical-align: middle;
+  background: url('/images/mario-ground.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-bottom: 128px;
+}
+* {
+  font-family: 'Press Start 2P', cursive;
+}
+p {
+  font-size: 16px;
+}
+.logo {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+.large-image {
+  position: absolute;
+  top: 30px;
+  z-index: 0;
+}
+.large-image img {
+  max-width: 100%;
+}
