@@ -1,10 +1,15 @@
-$('.ground .text').slideUp(1)
-$(".logo").slideUp(1).delay(300).slideDown('slow', () ->
-  $('.ground .text').delay(400).slideDown('slow')
+logo = $(".logo")
+intro_text = $('.intro .text')
+
+intro_text.slideUp(1)
+logo.slideUp(1).delay(300).slideDown('slow', () ->
+  intro_text.delay(600).slideDown('slow')
 )
 
 panObject = (selector, introBodyPosition = 0, introBodyPositionMax = 64, introBodyUpdate = 100) ->
   introBody = $(selector)
+
+  introBodyPosition = Math.floor(Math.random() * (introBodyPositionMax - introBodyPosition + 1)) + introBodyPosition;
 
   animateBackground = () ->
     introBodyPosition--
