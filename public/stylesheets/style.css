@@ -96,7 +96,7 @@ p {
   text-align: left;
 }
 .platform-point p {
-  font-size: 14px;
+  font-size: 16px;
 }
 @-webkit-keyframes coin {
   from {
@@ -127,13 +127,75 @@ p {
   height: 64px;
   margin: 30px;
   background-image: url("/images/mario-coin.png");
-  -webkit-animation: coin 0.6s steps(4, end) infinite;
-  -moz-animation: coin 0.6s steps(4, end) infinite;
-  animation: coin 0.6s steps(4, end) infinite;
+  -webkit-animation: coin 0.7s steps(4, end) infinite;
+  -moz-animation: coin 0.7s steps(4, end) infinite;
+  animation: coin 0.7s steps(4, end) infinite;
+}
+.coin:first-child {
+  margin-top: 0;
+}
+.coin:last-child {
+  margin-bottom: 0;
 }
 .coin:nth-child(n) {
   margin-left: 58px;
 }
 .coin:nth-child(2n) {
   margin-left: 116px;
+}
+@-webkit-keyframes box {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+@-moz-keyframes box {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+@keyframes box {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+.sidebar {
+  margin-top: 63px;
+  position: absolute;
+  top: 0;
+}
+.sidebar-left {
+  left: 0;
+}
+.sidebar-right {
+  right: 0;
+}
+.box {
+  width: 64px;
+  height: 64px;
+  margin: 40px 0px;
+  background-image: url("/images/mario-question-block.png");
+  -webkit-animation: box 0.6s steps(4, end) infinite;
+  -moz-animation: box 0.6s steps(4, end) infinite;
+  animation: box 0.6s steps(4, end) infinite;
+}
+.box:first-child {
+  margin-top: 0;
+}
+.box:last-child {
+  margin-bottom: 0;
+}
+.box:nth-child(n) {
+  margin-left: 0;
+}
+.box:nth-child(2n) {
+  margin-left: 74px;
 }
