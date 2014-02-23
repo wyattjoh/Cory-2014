@@ -129,3 +129,51 @@ p {
         max-height: 100%;
     }
 }
+
+.platform-point {
+    text-align: left;
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@coin-width: 48px;
+@coin-steps: 4;
+@coin-animation-speed: .6s;
+
+@-webkit-keyframes coin {
+    from { background-position: 0px; }
+    to { background-position: -@coin-width * @coin-steps; }
+}
+
+@-moz-keyframes coin {
+    from { background-position: 0px; }
+    to { background-position: -@coin-width * @coin-steps; }
+}
+
+@keyframes coin {
+    from { background-position: 0px; }
+    to { background-position: -@coin-width * @coin-steps; }
+}
+
+
+.coin {
+
+    width: @coin-width;
+    height: 64px;
+    margin: 30px;
+    background-image: url("/images/mario-coin.png");
+    
+    &:nth-child(n) {
+        margin-left: 10px + @coin-width;
+    }
+
+    &:nth-child(2n) {
+        margin-left: 10px * 2 + @coin-width * 2;
+    }
+    
+    -webkit-animation: coin @coin-animation-speed steps(@coin-steps, end) infinite;
+    -moz-animation: coin @coin-animation-speed steps(@coin-steps, end) infinite;
+    animation: coin @coin-animation-speed steps(@coin-steps, end) infinite;
+}

@@ -1,14 +1,11 @@
-
 /**
  * Module dependencies.
  */
 
 var express = require('express');
 var routes = require('./routes');
-var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
-var fs = require('fs');
 
 var app = express();
 
@@ -26,7 +23,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-// app.use(require('less-middleware')({ src: path.join(__dirname, 'public'), yuicompress: true, once: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -35,16 +31,8 @@ if ('development' == app.get('env')) {
   app.locals.pretty = true;
 }
 
-app.all('*', function(req, res, next){
-  fs.readFile('./data/content.json', function(err, data){
-  	if (err) throw err;
-    res.locals.content = JSON.parse(data);
-    next();
-  });
-});
-
+// Default route
 app.get('/', routes.index);
-app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
