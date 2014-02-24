@@ -82,6 +82,17 @@ body {
   position: absolute;
   bottom: 0px;
 }
+.backgrounds .hills {
+  background: url('/images/mario-hills.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  opacity: 0.4;
+  height: 336px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 128px;
+}
 .clouds {
   display: table;
   width: 100%;
