@@ -138,6 +138,51 @@ p {
 .platform-point p {
   font-size: 16px;
 }
+@-webkit-keyframes shell {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+@-moz-keyframes shell {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+@keyframes shell {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -256px;
+  }
+}
+.shell {
+  width: 64px;
+  height: 64px;
+  margin: 30px;
+  background-image: url("/images/mario-shell.png");
+  -webkit-animation: shell 0.7s steps(4, end) infinite;
+  -moz-animation: shell 0.7s steps(4, end) infinite;
+  animation: shell 0.7s steps(4, end) infinite;
+}
+.shell:first-child {
+  margin-top: 0;
+}
+.shell:last-child {
+  margin-bottom: 0;
+}
+.shell:nth-child(n) {
+  margin-left: 0;
+}
+.shell:nth-child(2n) {
+  margin-left: 64px;
+}
 @-webkit-keyframes coin {
   from {
     background-position: 0px;
