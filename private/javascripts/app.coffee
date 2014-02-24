@@ -21,5 +21,6 @@ panObject = (selector, introBodyPosition = 0, introBodyPositionMax = 64, introBo
   setInterval animateBackground, introBodyUpdate
   animateBackground()
 
-panObject '.backgrounds .ground, .clouds .body'
+panObject '.backgrounds .ground, .clouds .body, .backgrounds .forest-ground'
 panObject '.backgrounds .mountains', 0, 1024, 450
+panObject '.backgrounds .forest', 0, 512, 450

@@ -26,15 +26,17 @@ html, body {
     text-align: center;
     position: relative;
 
+    border-top: 4px solid black;
+
     &:nth-child(n) {
         background-color: @secondary-color-one;
         color: black;
     }
 
     &:nth-child(2n) {
-        background-color: @primary-color-one;
-        color: white;
-        z-index: 1;
+        // background-color: @primary-color-one;
+        // color: white;
+        // z-index: 1;
     }
 }
 
@@ -67,8 +69,19 @@ html, body {
         bottom: 128px;
     }
 
-    .ground {
-        background: url('/images/mario-ground.png');
+    .forest {
+        background: url('/images/mario-forest.png');
+        background-repeat: repeat-x;
+        background-position-y: bottom !important;
+        opacity: 0.5;
+        height: 201px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: 128px;
+    }
+
+    .ground-base {
         background-repeat: repeat-x;
         background-position-y: bottom !important;
         z-index: 2;
@@ -76,7 +89,17 @@ html, body {
         width: 100%;
         display: block;
         position: absolute;
-        bottom: 0px;
+        bottom: 0px;        
+    }
+
+    .ground {
+        background: url('/images/mario-ground.png');
+        .ground-base;
+    }
+
+    .forest-ground {
+        background: url('/images/mario-forest-ground.png');
+        .ground-base;
     }
 }
 
@@ -106,13 +129,14 @@ p, h1, h2, h3, h4 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 
 
 .logo {
     margin-bottom: 30px;
+    margin-top: 15px;
     max-width: 100%;
 
     max-height: 200px;
@@ -246,4 +270,33 @@ p {
     -webkit-animation: box @box-animation-speed steps(@box-steps, end) infinite;
     -moz-animation: box @box-animation-speed steps(@box-steps, end) infinite;
     animation: box @box-animation-speed steps(@box-steps, end) infinite;
+}
+
+.button-row {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin: 50px 0;
+}
+
+.mario-button {
+    padding: 10px;
+    background: darken(@secondary-color-one, 20%);
+    display: inline-block;
+    margin: 0 10px;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: black;
+        font-size: 18px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    border: 4px solid black;
 }

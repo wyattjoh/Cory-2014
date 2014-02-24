@@ -9,15 +9,11 @@ body {
   height: 100%;
   text-align: center;
   position: relative;
+  border-top: 4px solid black;
 }
 .page-box:nth-child(n) {
   background-color: #cdf6c8;
   color: black;
-}
-.page-box:nth-child(2n) {
-  background-color: #327eda;
-  color: white;
-  z-index: 1;
 }
 .page-box {
   display: table;
@@ -43,8 +39,40 @@ body {
   position: absolute;
   bottom: 128px;
 }
+.backgrounds .forest {
+  background: url('/images/mario-forest.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  opacity: 0.5;
+  height: 201px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 128px;
+}
+.backgrounds .ground-base {
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  z-index: 2;
+  height: 128px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
 .backgrounds .ground {
   background: url('/images/mario-ground.png');
+  background-repeat: repeat-x;
+  background-position-y: bottom !important;
+  z-index: 2;
+  height: 128px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
+.backgrounds .forest-ground {
+  background: url('/images/mario-forest-ground.png');
   background-repeat: repeat-x;
   background-position-y: bottom !important;
   z-index: 2;
@@ -75,10 +103,11 @@ h4 {
   font-family: 'Press Start 2P', cursive;
 }
 p {
-  font-size: 16px;
+  font-size: 15px;
 }
 .logo {
   margin-bottom: 30px;
+  margin-top: 15px;
   max-width: 100%;
   max-height: 200px;
 }
@@ -198,4 +227,28 @@ p {
 }
 .box:nth-child(2n) {
   margin-left: 74px;
+}
+.button-row {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin: 50px 0;
+}
+.mario-button {
+  padding: 10px;
+  background: #7de870;
+  display: inline-block;
+  margin: 0 10px;
+  border: 4px solid black;
+}
+.mario-button p {
+  margin: 0;
+  padding: 0;
+}
+.mario-button a {
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
