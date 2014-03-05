@@ -9,6 +9,7 @@ body {
   height: 100%;
   text-align: center;
   position: relative;
+  overflow: hidden;
   border-top: 4px solid black;
 }
 .page-box:nth-child(n) {
@@ -114,7 +115,14 @@ h4 {
   font-family: 'Press Start 2P', cursive;
 }
 p {
-  font-size: 15px;
+  font-size: 1em;
+}
+h1,
+h2,
+h4,
+h5,
+h6 {
+  font-size: 1.6em;
 }
 .logo {
   margin-bottom: 30px;
@@ -136,7 +144,7 @@ p {
   text-align: left;
 }
 .platform-point p {
-  font-size: 16px;
+  font-size: 1em;
 }
 @-webkit-keyframes shell {
   from {
@@ -307,4 +315,8 @@ p {
   font-size: 18px;
   text-decoration: none;
   text-transform: uppercase;
+}
+.large-text .text,
+.logo {
+  display: none;
 }

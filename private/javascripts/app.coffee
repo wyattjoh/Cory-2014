@@ -1,8 +1,7 @@
 logo = $(".logo")
 intro_text = $('.intro .text')
 
-intro_text.slideUp(1)
-logo.slideUp(1).delay(300).slideDown('slow', () ->
+logo.delay(300).slideDown('slow', () ->
   intro_text.delay(600).slideDown('slow')
 )
 
